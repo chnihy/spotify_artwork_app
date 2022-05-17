@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Spotify Artwork Search{% endblock %}
+{% block header %}Spotify Artwork Search{% endblock %}
+{% block content %}
+
+<form method="post">
+  <label for="track">Enter Track</label>
+  <input type="text" name="track" id="track_entry"><br>
+  <label for="artist">Enter Artist</label>
+  <input type="text" name="artist" id="artist"><br>
+
+  <input type="submit" value="submit">
+</form>
+
+
+	<br>
+	{% if image %}
+  <img src={{image}} alt={{message}}>
+	
+	{% endif %}
+
+  {% if error_msg %}
+    {{error_msg}}
+  {% endif %}
+	
+
+{% endblock content %}
